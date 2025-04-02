@@ -17,7 +17,7 @@ const projects = [
   {
     title: "Coming soon...",
     description: "Daugiau projektų netrukus 👀",
-    image: "/comingsoon.jpg",
+    title: "?", image: "/comingsoon.jpg",
   },
 ];
 
@@ -45,7 +45,7 @@ My strength lies in the fusion of creativity and technology.`,
 
   return (
     <div className={darkMode ? "dark" : ""}>
-      <div className="min-h-screen bg-gradient-to-br from-[#f7f9fc] to-[#e4e7ec] text-gray-900 dark:from-gray-900 dark:to-gray-800 dark:text-white px-6 py-12 font-sans transition-colors">
+      <div className="min-h-screen bg-gradient-to-br from-indigo-50 to-purple-100 dark:from-gray-900 dark:to-gray-800 text-gray-900 dark:from-gray-900 dark:to-gray-800 dark:text-white px-6 py-12 font-sans transition-colors">
         <div className="flex justify-end mb-4 gap-4">
           <button
             onClick={() => setDarkMode(!darkMode)}
@@ -92,14 +92,15 @@ My strength lies in the fusion of creativity and technology.`,
           </div>
         </section>
 
-        <section className="max-w-6xl mx-auto mb-24">
+        <div className="border-t border-indigo-200 dark:border-gray-700 my-24"></div>
+<section className="max-w-6xl mx-auto mb-24">
           <h2 className="text-3xl font-bold text-center text-indigo-700 dark:text-indigo-300 mb-8">
             {lang === "lt" ? "Įvykdyti projektai" : "Completed Projects"}
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
             {projects.map((project, idx) => (
-              <div key={idx} className="bg-white dark:bg-gray-900 rounded-2xl shadow-xl border border-gray-200 dark:border-gray-700 overflow-hidden hover:shadow-2xl transition-shadow">
-                <img src={project.image} alt={project.title} className="w-full h-72 object-cover" />
+              <div key={idx} className="bg-white/80 dark:bg-gray-800/60 backdrop-blur-md rounded-2xl shadow-xl border border-gray-200 dark:border-gray-700 overflow-hidden hover:shadow-2xl transition-shadow">
+                <img src={project.image} alt={project.title} className="w-full h-[320px] object-cover" />
                 <div className="p-5">
                   <h3 className="text-xl font-semibold text-indigo-700 dark:text-indigo-300 mb-2">{project.title}</h3>
                   <p className="text-gray-700 dark:text-gray-300 text-sm">{project.description}</p>
@@ -107,6 +108,24 @@ My strength lies in the fusion of creativity and technology.`,
               </div>
             ))}
           </div>
+        </section>
+
+        <div className="border-t border-indigo-200 dark:border-gray-700 my-24"></div>
+<section className="max-w-4xl mx-auto mb-24 text-center">
+          <h2 className="text-3xl font-bold text-indigo-700 dark:text-indigo-300 mb-4">
+            {lang === "lt" ? "Kontaktai" : "Contact"}
+          </h2>
+          <p className="text-lg text-gray-700 dark:text-gray-300 mb-6">
+            {lang === "lt"
+              ? "Susisiekime – atsakysiu kaip įmanoma greičiau 📬"
+              : "Let's get in touch – I’ll get back to you shortly 📬"}
+          </p>
+          <a
+            href="mailto:patrikasbartanovicius@gmail.com"
+            className="inline-block bg-indigo-600 text-white px-6 py-3 rounded-full shadow-md hover:bg-indigo-700 transition"
+          >
+            patrikasbartanovicius@gmail.com
+          </a>
         </section>
 
         <footer className="text-center text-sm text-gray-500 dark:text-gray-400 mt-24 border-t pt-6">
