@@ -67,13 +67,13 @@ My strength lies in the fusion of creativity and technology.`,
           <div className="flex justify-end mb-4 gap-4">
             <button
               onClick={() => setDarkMode(!darkMode)}
-              className="text-sm px-3 py-1 border rounded shadow bg-white text-gray-700 dark:bg-gray-800 dark:text-white"
+              className="text-base px-4 py-2 border rounded shadow bg-white text-gray-700 dark:bg-gray-800 dark:text-white hover:ring-2 hover:ring-indigo-300 transition"
             >
               {darkMode ? "☀️" : "🌙"}
             </button>
             <button
               onClick={() => setLang(lang === "lt" ? "en" : "lt")}
-              className="text-sm px-3 py-1 border rounded shadow bg-white text-gray-700 dark:bg-gray-800 dark:text-white"
+              className="text-base px-4 py-2 border rounded shadow bg-white text-gray-700 dark:bg-gray-800 dark:text-white hover:ring-2 hover:ring-indigo-300 transition"
             >
               {lang === "lt" ? "EN" : "LT"}
             </button>
