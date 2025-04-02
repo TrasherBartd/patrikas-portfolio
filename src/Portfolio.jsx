@@ -45,6 +45,22 @@ My strength lies in the fusion of creativity and technology.`,
 
   return (
     <div className={darkMode ? "dark" : ""}>
+  <style>{`
+    .fade-in {
+      opacity: 0;
+      animation: fadeInUp 1s ease-out forwards;
+    }
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  `}</style>
       <div className="min-h-screen bg-gradient-to-br from-indigo-50 to-purple-100 dark:from-gray-900 dark:to-gray-800 text-gray-900 dark:from-gray-900 dark:to-gray-800 dark:text-white px-6 py-12 font-sans transition-colors">
         <div className="flex justify-end mb-4 gap-4">
           <button
@@ -62,7 +78,7 @@ My strength lies in the fusion of creativity and technology.`,
         </div>
 
         <header className="text-center mb-20">
-          <h1 className="text-5xl font-bold text-indigo-700 dark:text-indigo-300">Patrikas</h1>
+          <h1 className="text-5xl font-bold text-indigo-700 dark:text-indigo-300">Patrikas Bartanovičius</h1>
           <p className="text-xl mt-2">{lang === "lt" ? "Grafinis ir svetainių dizaineris" : "Graphic & Web Designer"}</p>
         </header>
 
