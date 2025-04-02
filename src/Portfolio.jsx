@@ -82,20 +82,9 @@ My strength lies in the fusion of creativity and technology.`,
           <header className="text-center mb-20">
             <h1 className="text-5xl font-bold text-indigo-700 dark:text-indigo-300">Patrikas Bartanovičius</h1>
             <p className="text-xl mt-2">{lang === "lt" ? "Grafinis ir svetainių dizaineris" : "Graphic & Web Designer"}</p>
-    <div className="mt-4">
-      <button
-        onClick={() => {
-          navigator.clipboard.writeText("patrikasbartanovicius@gmail.com");
-          alert(lang === "lt" ? "El. paštas nukopijuotas!" : "Email copied!");
-        }}
-        className="bg-indigo-600 text-white px-5 py-2 rounded-full shadow hover:bg-indigo-700 transition"
-      >
-        {lang === "lt" ? "Kopijuoti el. paštą" : "Copy Email"}
-      </button>
-    </div>
           </header>
 
-          <section className="max-w-4xl mx-auto mb-24 fade-in">
+          <section className="max-w-4xl mx-auto mb-16 fade-in">
             <h2 className="text-3xl font-bold mb-4 text-indigo-700 dark:text-indigo-300">
               {lang === "lt" ? "Apie mane" : "About Me"}
             </h2>
@@ -104,7 +93,7 @@ My strength lies in the fusion of creativity and technology.`,
             </p>
           </section>
 
-          <section className="max-w-5xl mx-auto mb-24 fade-in">
+          <section className="max-w-5xl mx-auto mb-16 fade-in">
             <h2 className="text-3xl font-bold text-center text-indigo-700 dark:text-indigo-300 mb-8">
               {lang === "lt" ? "Įgūdžiai" : "Skills"}
             </h2>
@@ -118,7 +107,7 @@ My strength lies in the fusion of creativity and technology.`,
             </div>
           </section>
 
-          <section className="max-w-6xl mx-auto mb-24 fade-in">
+          <section className="max-w-6xl mx-auto mb-12 fade-in">
             <h2 className="text-3xl font-bold text-center text-indigo-700 dark:text-indigo-300 mb-8">
               {lang === "lt" ? "Įvykdyti projektai" : "Completed Projects"}
             </h2>
@@ -126,7 +115,7 @@ My strength lies in the fusion of creativity and technology.`,
               {projects.map((project, idx) => (
                 <div key={idx} className="bg-white/80 dark:bg-gray-800/60 backdrop-blur-md rounded-2xl shadow-xl border border-gray-200 dark:border-gray-700 overflow-hidden hover:shadow-2xl transition-shadow">
                   {project.image && (
-                    <img src={project.image} alt={project.title} className="w-full h-[320px] object-cover" />
+                    <img src={project.image} alt={project.title} className="w-full h-[460px] object-cover" />
                   )}
                   <div className="p-6">
                     <h3 className="text-xl font-bold text-indigo-700 dark:text-indigo-300 mb-2">{project.title}</h3>
@@ -189,6 +178,42 @@ My strength lies in the fusion of creativity and technology.`,
             </div>
           </section>
 
+<section className="max-w-3xl mx-auto mt-16 text-center fade-in">
+  <h2 className="text-3xl font-bold text-indigo-700 dark:text-indigo-300 mb-4">
+    {lang === "lt" ? "Palikite atsiliepimą" : "Leave a Testimonial"}
+  </h2>
+  <form
+    onSubmit={(e) => {
+      e.preventDefault();
+      alert(lang === "lt" ? "Atsiliepimas išsiųstas!" : "Testimonial sent!");
+      e.target.reset();
+    }}
+    className="bg-white dark:bg-gray-900 p-6 rounded-xl shadow-md border border-gray-200 dark:border-gray-700 space-y-4"
+  >
+    <input
+      type="text"
+      name="name"
+      placeholder={lang === "lt" ? "Tavo vardas" : "Your name"}
+      required
+      className="w-full p-2 border rounded focus:outline-none"
+    />
+    <textarea
+      name="message"
+      placeholder={lang === "lt" ? "Atsiliepimo tekstas..." : "Your testimonial..."}
+      rows="4"
+      required
+      className="w-full p-2 border rounded focus:outline-none"
+    />
+    <button
+      type="submit"
+      className="bg-indigo-600 text-white px-6 py-2 rounded-full hover:bg-indigo-700 transition"
+    >
+      {lang === "lt" ? "Siųsti" : "Send"}
+    </button>
+  </form>
+</section>
+
+
           <div className="mt-12 max-w-4xl mx-auto text-center text-gray-500 dark:text-gray-400 text-sm">
             {lang === "lt"
               ? "Esate pasiruošęs naujam projektui? Susisiekime šiandien."
@@ -198,41 +223,6 @@ My strength lies in the fusion of creativity and technology.`,
           <footer className="text-center text-sm text-gray-500 dark:text-gray-400 mt-24 border-t pt-6">
             © {new Date().getFullYear()} Patrikas Bartanovičius. All rights reserved.
           </footer>
-
-    <section className="max-w-3xl mx-auto mt-20 text-center fade-in">
-      <h2 className="text-3xl font-bold text-indigo-700 dark:text-indigo-300 mb-4">
-        {lang === "lt" ? "Palikite atsiliepimą" : "Leave a Testimonial"}
-      </h2>
-      <form
-        onSubmit={(e) => {
-          e.preventDefault();
-          alert(lang === "lt" ? "Atsiliepimas išsiųstas!" : "Testimonial sent!");
-          e.target.reset();
-        }}
-        className="bg-white dark:bg-gray-900 p-6 rounded-xl shadow-md border border-gray-200 dark:border-gray-700 space-y-4"
-      >
-        <input
-          type="text"
-          name="name"
-          placeholder={lang === "lt" ? "Tavo vardas" : "Your name"}
-          required
-          className="w-full p-2 border rounded focus:outline-none"
-        />
-        <textarea
-          name="message"
-          placeholder={lang === "lt" ? "Atsiliepimo tekstas..." : "Your testimonial..."}
-          rows="4"
-          required
-          className="w-full p-2 border rounded focus:outline-none"
-        />
-        <button
-          type="submit"
-          className="bg-indigo-600 text-white px-6 py-2 rounded-full hover:bg-indigo-700 transition"
-        >
-          {lang === "lt" ? "Siųsti" : "Send"}
-        </button>
-      </form>
-    </section>
         </div>
       </div>
     </>
