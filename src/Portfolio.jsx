@@ -128,7 +128,7 @@ My strength lies in the fusion of creativity and technology.`,
             className="inline-block bg-indigo-600 text-white px-6 py-3 rounded-full shadow-md hover:bg-indigo-700 transition cursor-pointer"
           >
             patrikasbartanovicius@gmail.com
-          </a>
+          </button>
         </section>
 
         <div className="mt-12 max-w-4xl mx-auto text-center text-gray-500 dark:text-gray-400 text-sm">
