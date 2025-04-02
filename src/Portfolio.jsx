@@ -38,7 +38,9 @@ My strength lies in the fusion of creativity and technology.`,
     { emoji: "🎨", label: lang === "lt" ? "Grafinis dizainas" : "Graphic Design" },
     { emoji: "💻", label: lang === "lt" ? "Svetainių dizainas" : "Website Design" },
     { emoji: "🧠", label: "C#" },
-    { emoji: "🤖", label: lang === "lt" ? "Dizaino įrankiai" : "Design Tools" },
+    { emoji: "🌐", label: "HTML" },
+    { emoji: "🎯", label: "CSS" },
+    { emoji: "🛠️", label: lang === "lt" ? "Dizaino įrankiai" : "Design Tools" },
   ];
 
   return (
@@ -77,7 +79,7 @@ My strength lies in the fusion of creativity and technology.`,
           <h2 className="text-3xl font-bold text-center text-indigo-700 dark:text-indigo-300 mb-8">
             {lang === "lt" ? "Įgūdžiai" : "Skills"}
           </h2>
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
             {skills.map((skill, idx) => (
               <div
                 key={idx}
@@ -92,12 +94,12 @@ My strength lies in the fusion of creativity and technology.`,
 
         <section className="max-w-6xl mx-auto mb-24">
           <h2 className="text-3xl font-bold text-center text-indigo-700 dark:text-indigo-300 mb-8">
-            {lang === "lt" ? "Projektai" : "Projects"}
+            {lang === "lt" ? "Įvykdyti projektai" : "Completed Projects"}
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
             {projects.map((project, idx) => (
               <div key={idx} className="bg-white dark:bg-gray-900 rounded-2xl shadow-xl border border-gray-200 dark:border-gray-700 overflow-hidden hover:shadow-2xl transition-shadow">
-                <img src={project.image} alt={project.title} className="w-full h-56 object-cover" />
+                <img src={project.image} alt={project.title} className="w-full h-72 object-cover" />
                 <div className="p-5">
                   <h3 className="text-xl font-semibold text-indigo-700 dark:text-indigo-300 mb-2">{project.title}</h3>
                   <p className="text-gray-700 dark:text-gray-300 text-sm">{project.description}</p>
