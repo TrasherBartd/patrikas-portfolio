@@ -17,7 +17,7 @@ const projects = [
   {
     title: "Coming soon...",
     description: "Daugiau projektų netrukus 👀",
-    title: "?", image: "/comingsoon.jpg",
+    title: "?", image: "",
   },
 ];
 
@@ -120,13 +120,22 @@ My strength lies in the fusion of creativity and technology.`,
               ? "Susisiekime – atsakysiu kaip įmanoma greičiau 📬"
               : "Let's get in touch – I’ll get back to you shortly 📬"}
           </p>
-          <a
-            href="mailto:patrikasbartanovicius@gmail.com"
-            className="inline-block bg-indigo-600 text-white px-6 py-3 rounded-full shadow-md hover:bg-indigo-700 transition"
+          <button
+            onClick={() => {
+              navigator.clipboard.writeText("patrikasbartanovicius@gmail.com");
+              alert(lang === "lt" ? "El. paštas nukopijuotas!" : "Email copied!");
+            }}
+            className="inline-block bg-indigo-600 text-white px-6 py-3 rounded-full shadow-md hover:bg-indigo-700 transition cursor-pointer"
           >
             patrikasbartanovicius@gmail.com
           </a>
         </section>
+
+        <div className="mt-12 max-w-4xl mx-auto text-center text-gray-500 dark:text-gray-400 text-sm">
+          {lang === "lt"
+            ? "Esate pasiruošęs naujam projektui? Susisiekime šiandien."
+            : "Ready for a new project? Let’s connect today."}
+        </div>
 
         <footer className="text-center text-sm text-gray-500 dark:text-gray-400 mt-24 border-t pt-6">
           © {new Date().getFullYear()} Patrikas. All rights reserved.
