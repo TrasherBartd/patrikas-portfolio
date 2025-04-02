@@ -82,6 +82,17 @@ My strength lies in the fusion of creativity and technology.`,
           <header className="text-center mb-20">
             <h1 className="text-5xl font-bold text-indigo-700 dark:text-indigo-300">Patrikas Bartanovičius</h1>
             <p className="text-xl mt-2">{lang === "lt" ? "Grafinis ir svetainių dizaineris" : "Graphic & Web Designer"}</p>
+    <div className="mt-4">
+      <button
+        onClick={() => {
+          navigator.clipboard.writeText("patrikasbartanovicius@gmail.com");
+          alert(lang === "lt" ? "El. paštas nukopijuotas!" : "Email copied!");
+        }}
+        className="bg-indigo-600 text-white px-5 py-2 rounded-full shadow hover:bg-indigo-700 transition"
+      >
+        {lang === "lt" ? "Kopijuoti el. paštą" : "Copy Email"}
+      </button>
+    </div>
           </header>
 
           <section className="max-w-4xl mx-auto mb-24 fade-in">
@@ -187,6 +198,41 @@ My strength lies in the fusion of creativity and technology.`,
           <footer className="text-center text-sm text-gray-500 dark:text-gray-400 mt-24 border-t pt-6">
             © {new Date().getFullYear()} Patrikas Bartanovičius. All rights reserved.
           </footer>
+
+    <section className="max-w-3xl mx-auto mt-20 text-center fade-in">
+      <h2 className="text-3xl font-bold text-indigo-700 dark:text-indigo-300 mb-4">
+        {lang === "lt" ? "Palikite atsiliepimą" : "Leave a Testimonial"}
+      </h2>
+      <form
+        onSubmit={(e) => {
+          e.preventDefault();
+          alert(lang === "lt" ? "Atsiliepimas išsiųstas!" : "Testimonial sent!");
+          e.target.reset();
+        }}
+        className="bg-white dark:bg-gray-900 p-6 rounded-xl shadow-md border border-gray-200 dark:border-gray-700 space-y-4"
+      >
+        <input
+          type="text"
+          name="name"
+          placeholder={lang === "lt" ? "Tavo vardas" : "Your name"}
+          required
+          className="w-full p-2 border rounded focus:outline-none"
+        />
+        <textarea
+          name="message"
+          placeholder={lang === "lt" ? "Atsiliepimo tekstas..." : "Your testimonial..."}
+          rows="4"
+          required
+          className="w-full p-2 border rounded focus:outline-none"
+        />
+        <button
+          type="submit"
+          className="bg-indigo-600 text-white px-6 py-2 rounded-full hover:bg-indigo-700 transition"
+        >
+          {lang === "lt" ? "Siųsti" : "Send"}
+        </button>
+      </form>
+    </section>
         </div>
       </div>
     </>
