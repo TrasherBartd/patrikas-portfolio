@@ -82,6 +82,17 @@ My strength lies in the fusion of creativity and technology.`,
           <header className="text-center mb-20">
             <h1 className="text-5xl font-bold text-indigo-700 dark:text-indigo-300">Patrikas Bartanovičius</h1>
             <p className="text-xl mt-2">{lang === "lt" ? "Grafinis ir svetainių dizaineris" : "Graphic & Web Designer"}</p>
+    <div className="mt-3">
+      <button
+        onClick={() => {
+          navigator.clipboard.writeText("patrikasbartanovicius@gmail.com");
+          alert(lang === "lt" ? "El. paštas nukopijuotas!" : "Email copied!");
+        }}
+        className="text-sm bg-indigo-100 hover:bg-indigo-200 text-indigo-700 px-4 py-1 rounded-full transition"
+      >
+        {lang === "lt" ? "Kopijuoti el. paštą" : "Copy Email"}
+      </button>
+    </div>
           </header>
 
           <section className="max-w-4xl mx-auto mb-16 fade-in">
