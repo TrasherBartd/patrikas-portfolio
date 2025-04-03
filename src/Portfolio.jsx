@@ -50,17 +50,86 @@ export default function Portfolio() {
           </p>
         </header>
 
-        <section className="mb-16">
+        
+<section className="mt-20 max-w-5xl mx-auto">
+  <h2 className="text-4xl font-bold mb-6 text-indigo-700">{lang === 'lt' ? 'Įgūdžiai' : 'Skills'}</h2>
+  <div className="grid grid-cols-2 sm:grid-cols-3 gap-6">
+    {[
+      "💻 HTML / CSS",
+      "⚙️ JavaScript",
+      "🎯 C#",
+      "🎨 Grafinis dizainas",
+      "🌐 Svetainių kūrimas",
+      "🧠 UI / UX pagrindai"
+    ].map((skill, idx) => (
+      <div
+        key={idx}
+        className="bg-white dark:bg-gray-800 p-6 rounded-xl text-center shadow-lg border border-indigo-100 hover:scale-105 transition-transform hover:shadow-xl"
+      >
+        <p className="text-lg font-semibold text-indigo-800 dark:text-indigo-300">{skill}</p>
+      </div>
+    ))}
+  </div>
+</section>
+
+<section className="mb-16">
+
           <h2 className="text-3xl font-semibold mb-4">{lang === "lt" ? "Apie mane" : "About Me"}</h2>
           <p className="leading-relaxed">{aboutText[lang]}</p>
         </section>
 
-        <section className="mb-16">
+        
+<section className="mt-20 max-w-5xl mx-auto">
+  <h2 className="text-4xl font-bold mb-6 text-indigo-700">{lang === 'lt' ? 'Įgūdžiai' : 'Skills'}</h2>
+  <div className="grid grid-cols-2 sm:grid-cols-3 gap-6">
+    {[
+      "💻 HTML / CSS",
+      "⚙️ JavaScript",
+      "🎯 C#",
+      "🎨 Grafinis dizainas",
+      "🌐 Svetainių kūrimas",
+      "🧠 UI / UX pagrindai"
+    ].map((skill, idx) => (
+      <div
+        key={idx}
+        className="bg-white dark:bg-gray-800 p-6 rounded-xl text-center shadow-lg border border-indigo-100 hover:scale-105 transition-transform hover:shadow-xl"
+      >
+        <p className="text-lg font-semibold text-indigo-800 dark:text-indigo-300">{skill}</p>
+      </div>
+    ))}
+  </div>
+</section>
+
+<section className="mb-16">
+
           <h2 className="text-3xl font-semibold mb-4">{lang === "lt" ? "Kodėl verta rinktis mane?" : "Why choose me?"}</h2>
           <p>{whyMeText[lang]}</p>
         </section>
 
-        <section className="mb-16">
+        
+<section className="mt-20 max-w-5xl mx-auto">
+  <h2 className="text-4xl font-bold mb-6 text-indigo-700">{lang === 'lt' ? 'Įgūdžiai' : 'Skills'}</h2>
+  <div className="grid grid-cols-2 sm:grid-cols-3 gap-6">
+    {[
+      "💻 HTML / CSS",
+      "⚙️ JavaScript",
+      "🎯 C#",
+      "🎨 Grafinis dizainas",
+      "🌐 Svetainių kūrimas",
+      "🧠 UI / UX pagrindai"
+    ].map((skill, idx) => (
+      <div
+        key={idx}
+        className="bg-white dark:bg-gray-800 p-6 rounded-xl text-center shadow-lg border border-indigo-100 hover:scale-105 transition-transform hover:shadow-xl"
+      >
+        <p className="text-lg font-semibold text-indigo-800 dark:text-indigo-300">{skill}</p>
+      </div>
+    ))}
+  </div>
+</section>
+
+<section className="mb-16">
+
           <h2 className="text-3xl font-semibold mb-4">{lang === "lt" ? "Įvykdyti projektai" : "Completed Projects"}</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
@@ -78,7 +147,30 @@ export default function Portfolio() {
           </div>
         </section>
 
-        <section className="mb-16">
+        
+<section className="mt-20 max-w-5xl mx-auto">
+  <h2 className="text-4xl font-bold mb-6 text-indigo-700">{lang === 'lt' ? 'Įgūdžiai' : 'Skills'}</h2>
+  <div className="grid grid-cols-2 sm:grid-cols-3 gap-6">
+    {[
+      "💻 HTML / CSS",
+      "⚙️ JavaScript",
+      "🎯 C#",
+      "🎨 Grafinis dizainas",
+      "🌐 Svetainių kūrimas",
+      "🧠 UI / UX pagrindai"
+    ].map((skill, idx) => (
+      <div
+        key={idx}
+        className="bg-white dark:bg-gray-800 p-6 rounded-xl text-center shadow-lg border border-indigo-100 hover:scale-105 transition-transform hover:shadow-xl"
+      >
+        <p className="text-lg font-semibold text-indigo-800 dark:text-indigo-300">{skill}</p>
+      </div>
+    ))}
+  </div>
+</section>
+
+<section className="mb-16">
+
           <h2 className="text-3xl font-semibold mb-4">{lang === "lt" ? "Atsiliepimai" : "Testimonials"}</h2>
           <div className="space-y-4">
             {feedbacks.map((fb, i) => (
