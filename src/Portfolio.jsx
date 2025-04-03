@@ -113,9 +113,27 @@ export default function Portfolio() {
               </div>
             ))}
           </div>
-        </section>
+        
+</section>
 
-        <section className="text-center mt-12">
+<section className="mt-12 max-w-2xl mx-auto bg-gray-50 dark:bg-gray-800 p-6 rounded-xl shadow">
+  <h3 className="text-2xl font-semibold mb-4 text-indigo-700 text-center">{lang === 'lt' ? 'Palikite atsiliepimą' : 'Leave a Testimonial'}</h3>
+  <form onSubmit={(e) => { e.preventDefault(); alert(lang === 'lt' ? 'Atsiliepimas išsiųstas!' : 'Testimonial submitted!'); }} className="space-y-4">
+    <div>
+      <label className="block mb-1 text-sm">{lang === 'lt' ? 'Jūsų vardas' : 'Your name'}</label>
+      <input type="text" required className="w-full p-2 border rounded bg-white dark:bg-gray-700 dark:border-gray-600" />
+    </div>
+    <div>
+      <label className="block mb-1 text-sm">{lang === 'lt' ? 'Jūsų atsiliepimas' : 'Your testimonial'}</label>
+      <textarea rows="3" required className="w-full p-2 border rounded bg-white dark:bg-gray-700 dark:border-gray-600"></textarea>
+    </div>
+    <button type="submit" className="px-4 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-700">
+      {lang === 'lt' ? 'Siųsti' : 'Submit'}
+    </button>
+  </form>
+</section>
+
+<section className="text-center mt-12">
           <p>{lang === "lt" ? "Susisiek: " : "Contact: "}</p>
           <p onClick={copyEmail} className="text-indigo-600 underline cursor-pointer">
             patrikasbartanovicius@gmail.com
