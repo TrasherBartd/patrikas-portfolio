@@ -50,7 +50,16 @@ export default function Portfolio() {
           </p>
         </header>
 
-        <section className="mt-20 max-w-5xl mx-auto">
+        
+<section className="mt-20 max-w-5xl mx-auto">
+  <h2 className="text-4xl font-bold mb-6 text-indigo-700">{lang === 'lt' ? 'Apie mane' : 'About Me'}</h2>
+  <p className="text-lg leading-relaxed text-gray-800 dark:text-gray-200 bg-white dark:bg-gray-900 p-6 rounded-2xl shadow-xl border border-gray-200 dark:border-gray-700">
+    {aboutText[lang]}
+  </p>
+</section>
+
+<section className="mt-20 max-w-5xl mx-auto">
+
           <h2 className="text-4xl font-bold mb-6 text-indigo-700">{lang === 'lt' ? 'Įgūdžiai' : 'Skills'}</h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-6">
             {[
