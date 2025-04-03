@@ -89,6 +89,36 @@ My strength lies in the fusion of creativity and technology.`
           </p>
         </section>
 
+
+<section className="max-w-6xl mx-auto mb-20 fade-in">
+  <h2 className="text-3xl font-bold text-indigo-700 dark:text-indigo-300 mb-10 text-center">
+    {lang === "lt" ? "Siūlomos paslaugos" : "Offered Services"}
+  </h2>
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div className="bg-white dark:bg-gray-900 p-6 rounded-xl shadow hover:shadow-lg transition border border-gray-200 dark:border-gray-700">
+      <h3 className="text-xl font-semibold text-indigo-700 dark:text-indigo-300 mb-2">🎨 {lang === "lt" ? "Socialinių tinklų dizainas" : "Social Media Design"}</h3>
+      <p className="text-gray-700 dark:text-gray-300">{lang === "lt"
+        ? "Vizualai Instagram, Facebook ar TikTok platformoms – profesionaliai ir įsimintinai."
+        : "Visuals for Instagram, Facebook or TikTok – professional and memorable."}</p>
+    </div>
+
+    <div className="bg-white dark:bg-gray-900 p-6 rounded-xl shadow hover:shadow-lg transition border border-gray-200 dark:border-gray-700">
+      <h3 className="text-xl font-semibold text-indigo-700 dark:text-indigo-300 mb-2">🖼️ {lang === "lt" ? "Spaudos dizainas" : "Print Design"}</h3>
+      <p className="text-gray-700 dark:text-gray-300">{lang === "lt"
+        ? "Plakatai, marškinėliai, etiketės, meniu ir kiti fiziniai produktai."
+        : "Posters, shirts, labels, menus, and other printed products."}</p>
+    </div>
+
+    <div className="bg-white dark:bg-gray-900 p-6 rounded-xl shadow hover:shadow-lg transition border border-gray-200 dark:border-gray-700">
+      <h3 className="text-xl font-semibold text-indigo-700 dark:text-indigo-300 mb-2">🌐 {lang === "lt" ? "Svetainių dizainas" : "Website Design"}</h3>
+      <p className="text-gray-700 dark:text-gray-300">{lang === "lt"
+        ? "Estetiški ir šiuolaikiški puslapiai tavo verslui, portfolio ar kampanijoms."
+        : "Modern and aesthetic pages for your business, portfolio or campaigns."}</p>
+    </div>
+  </div>
+</section>
+
+
         <section className="max-w-6xl mx-auto mb-16 fade-in">
           <h2 className="text-3xl font-bold text-indigo-700 dark:text-indigo-300 mb-6 text-center">
             {lang === "lt" ? "Įvykdyti projektai" : "Completed Projects"}
