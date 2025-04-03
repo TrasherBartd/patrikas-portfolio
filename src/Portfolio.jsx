@@ -153,16 +153,15 @@ My strength lies in the fusion of creativity and technology.`
 </section>
 
 
-        <footer className="text-center text-sm text-gray-500 dark:text-gray-400 mt-24 border-t pt-6">
-          © {new Date().getFullYear()} Patrikas Bartanovičius. All rights reserved.
         
-      </section>
+</section>
 
-      <footer className="text-center text-sm text-gray-500 dark:text-gray-400 mt-24 border-t pt-6">
-        © {new Date().getFullYear()} Patrikas Bartanovičius. All rights reserved.
-      </footer>
-    </div>
-  </div>
+<footer className="text-center text-sm text-gray-500 dark:text-gray-400 mt-24 border-t pt-6">
+  © {new Date().getFullYear()} Patrikas Bartanovičius. All rights reserved.
+</footer>
+
+</div>
+</div>
   );
-}
 
+}
