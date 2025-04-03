@@ -1,148 +1,90 @@
 
-// FINAL CLEANED VERSION with no duplicate skills section
-import { useState } from "react";
 import { Mail, Github, Linkedin } from "lucide-react";
+import { useState } from "react";
 
 export default function Portfolio() {
   const [darkMode, setDarkMode] = useState(false);
   const [lang, setLang] = useState("lt");
+  const [feedbacks, setFeedbacks] = useState([
+    {
+      name: "Jonas",
+      message: "Puikus bendravimas ir rezultatas! Rekomenduoju."
+    },
+    {
+      name: "Laura",
+      message: "Darbas atliktas greitai ir labai estetiškai."
+    }
+  ]);
 
   const aboutText = {
-    lt: `Esu savarankiškai išmokęs grafinio dizaino ir svetainių kūrimo pagrindus. Naudoju modernius metodus, kad padėčiau klientams perteikti savo vertę aiškiai, estetiškai ir profesionaliai.`,
-    en: `I am a self-taught graphic designer and website creator. I use modern tools to help clients present their value clearly, aesthetically, and professionally.`
+    lt: `Savarankiškai išmokęs grafinio dizaino ir svetainių kūrimo pagrindus, šiuo metu dirbu su moderniausiomis technologijomis, kad padėčiau klientams perteikti jų vertę aiškiai ir estetiškai.
+
+Mano stiprybė – kūrybos ir technologijų sintezė.`,
+    en: `Self-taught in graphic design and website development, I now work with modern technologies to help clients communicate their value clearly and beautifully.
+
+My strength lies in the fusion of creativity and technology.`
   };
-
-  const whyMeText = {
-    lt: `Skirtingai nei daugelis, nenaudoju tik dirbtinio intelekto generacijų. Derinu grafinį dizainą ir AI įrankius tam, kad pasiūlyčiau kūrybiškus, greitus ir kokybiškus rezultatus už prieinamą kainą.`,
-    en: `Unlike many, I don’t rely solely on AI generations. I combine graphic design with AI tools to deliver creative, fast, and quality results at a fair price.`
-  };
-
-  const feedbacks = [
-    { name: "Tomas", message: lang === "lt" ? "Užsakiau hoodie dizainą – gavau net geriau nei tikėjausi. Rekomenduoju!" : "Ordered hoodie design – got even better than expected. Recommend!" },
-    { name: "Lilija", message: lang === "lt" ? "Ačiū už stilingą kavos posterį mūsų šeimos kavinei!" : "Thank you for the stylish coffee poster for our family cafe!" },
-    { name: "Mantas", message: lang === "lt" ? "Puikus bendravimas ir greitas įvykdymas. Dar tikrai sugrįšiu!" : "Great communication and fast delivery. Will definitely return!" },
-  ];
-
-  function copyEmail() {
-    navigator.clipboard.writeText("patrikasbartanovicius@gmail.com");
-    alert(lang === "lt" ? "El. paštas nukopijuotas!" : "Email copied!");
-  }
 
   return (
-    <div className={darkMode ? "dark bg-gray-900 text-white" : "bg-white text-gray-900"}>
-      <div className="max-w-5xl mx-auto px-6 py-10 font-sans">
-        <div className="flex justify-between mb-4">
-          <button onClick={() => setLang(lang === "lt" ? "en" : "lt")} className="text-sm border px-2 py-1 rounded">
-            {lang === "lt" ? "EN" : "LT"}
-          </button>
-          <button onClick={() => setDarkMode(!darkMode)} className="text-sm border px-2 py-1 rounded">
-            {darkMode ? "☀️" : "🌙"}
+    <div className={darkMode ? 'dark' : ''}>
+      <style>
+        {`
+          @keyframes fadeInUp {
+            from {
+              opacity: 0;
+              transform: translateY(20px);
+            }
+            to {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
+          .fade-in {
+            animation: fadeInUp 0.8s ease-out both;
+          }
+        `}
+      </style>
+      <div className="min-h-screen bg-gradient-to-br from-[#f7f9fc] to-[#e4e7ec] text-gray-900 px-6 py-12 font-sans">
+        <div className="flex justify-end max-w-6xl mx-auto mb-4">
+          <button
+            onClick={() => setDarkMode(!darkMode)}
+            className="text-sm px-3 py-1 border rounded shadow bg-white text-gray-700 dark:bg-gray-800 dark:text-white"
+          >
+            {darkMode ? 'Šviesi tema' : 'Tamsi tema'}
           </button>
         </div>
 
-        <header className="text-center mb-12">
-          <h1 className="text-5xl font-bold bg-gradient-to-r from-purple-600 to-indigo-600 text-transparent bg-clip-text">
-            Patrikas Bartanovičius
-          </h1>
-          <p className="text-xl mt-2">{lang === "lt" ? "Grafinis ir svetainių dizaineris" : "Graphic & Website Designer"}</p>
-          <p onClick={copyEmail} className="mt-2 text-indigo-600 underline cursor-pointer">
-            {lang === "lt" ? "Spausti čia – el. paštas" : "Click here – email"}
-          </p>
+        <header className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10 text-center md:text-left border-b pb-10">
+          <div>
+            <h1 className="text-6xl font-extrabold tracking-tight mb-4 bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-600 text-transparent bg-clip-text">
+              Patrikas Bartanovičius
+            </h1>
+            <p className="text-2xl text-gray-700">Graphic & Website Designer</p>
+            <a
+              href="/Patrikas_Bartanovicius_CV_With_Top_Contact.pdf"
+              download
+              className="inline-block mt-4 text-sm text-indigo-600 border border-indigo-500 px-4 py-2 rounded hover:bg-indigo-50 transition"
+            >
+              📄 Atsisiųsti CV
+            </a>
+          </div>
+          <div className="w-36 h-36 rounded-full bg-gradient-to-tr from-[#cdddfc] to-[#f4e7ff] shadow-xl border-4 border-white"></div>
         </header>
 
-        
-<section className="mt-20 max-w-5xl mx-auto">
-  <h2 className="text-4xl font-bold mb-6 text-indigo-700">{lang === 'lt' ? 'Apie mane' : 'About Me'}</h2>
-  <p className="text-lg leading-relaxed text-gray-800 dark:text-gray-200 bg-white dark:bg-gray-900 p-6 rounded-2xl shadow-xl border border-gray-200 dark:border-gray-700">
-    {aboutText[lang]}
-  </p>
-</section>
-
-<section className="mt-20 max-w-5xl mx-auto">
-
-          <h2 className="text-4xl font-bold mb-6 text-indigo-700">{lang === 'lt' ? 'Įgūdžiai' : 'Skills'}</h2>
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-6">
-            {[
-              "💻 HTML / CSS",
-              "⚙️ JavaScript",
-              "🎯 C#",
-              "🎨 Grafinis dizainas",
-              "🌐 Svetainių kūrimas",
-              "🧠 UI / UX pagrindai"
-            ].map((skill, idx) => (
-              <div
-                key={idx}
-                className="bg-white dark:bg-gray-800 p-6 rounded-xl text-center shadow-lg border border-indigo-100 hover:scale-105 transition-transform hover:shadow-xl"
-              >
-                <p className="text-lg font-semibold text-indigo-800 dark:text-indigo-300">{skill}</p>
-              </div>
-            ))}
+        <section className="mt-20 max-w-5xl mx-auto fade-in">
+          <div className="flex justify-between items-center mb-4">
+            <h2 className="text-4xl font-bold text-indigo-700">{lang === 'lt' ? 'Apie mane' : 'About Me'}</h2>
+            <button
+              onClick={() => setLang(lang === "lt" ? "en" : "lt")}
+              className="text-sm text-indigo-600 border px-3 py-1 rounded hover:bg-indigo-50"
+            >
+              {lang === "lt" ? "EN" : "LT"}
+            </button>
           </div>
-        </section>
-
-        <section className="mb-16">
-          <h2 className="text-3xl font-semibold mb-4">{lang === "lt" ? "Kodėl verta rinktis mane?" : "Why choose me?"}</h2>
-          <p>{whyMeText[lang]}</p>
-        </section>
-
-        <section className="mb-16">
-          <h2 className="text-3xl font-semibold mb-4">{lang === "lt" ? "Įvykdyti projektai" : "Completed Projects"}</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div>
-              <img src="/hoodie.jpg" alt="hoodie design" className="rounded-xl shadow w-full h-auto object-cover"/>
-              <p className="mt-2 text-sm">{lang === "lt" ? "Hoodie dizainas Etsy parduotuvei (užsakovas – tiktokeris)" : "Hoodie design for Etsy shop (client – tiktoker)"}</p>
-            </div>
-            <div>
-              <img src="/coffee.jpg" alt="coffee poster" className="rounded-xl shadow w-full h-auto object-cover"/>
-              <p className="mt-2 text-sm">{lang === "lt" ? "Kavos reklamos plakatas šeimos kavinei" : "Coffee poster for a family cafe"}</p>
-            </div>
-            <div>
-              <img src="/extra.jpg" alt="coming" className="rounded-xl shadow w-full h-auto object-cover opacity-60"/>
-              <p className="mt-2 italic text-sm text-gray-500">{lang === "lt" ? "Daugiau netrukus..." : "More coming soon..."}</p>
-            </div>
-          </div>
-        </section>
-
-        <section className="mb-16">
-          <h2 className="text-3xl font-semibold mb-4">{lang === "lt" ? "Atsiliepimai" : "Testimonials"}</h2>
-          <div className="space-y-4">
-            {feedbacks.map((fb, i) => (
-              <div key={i} className="bg-gray-100 dark:bg-gray-800 p-4 rounded-lg shadow">
-                <p className="font-semibold">{fb.name}</p>
-                <p>{fb.message}</p>
-              </div>
-            ))}
-          </div>
-        
-</section>
-
-<section className="mt-12 max-w-2xl mx-auto bg-gray-50 dark:bg-gray-800 p-6 rounded-xl shadow">
-  <h3 className="text-2xl font-semibold mb-4 text-indigo-700 text-center">{lang === 'lt' ? 'Palikite atsiliepimą' : 'Leave a Testimonial'}</h3>
-  <form onSubmit={(e) => { e.preventDefault(); alert(lang === 'lt' ? 'Atsiliepimas išsiųstas!' : 'Testimonial submitted!'); }} className="space-y-4">
-    <div>
-      <label className="block mb-1 text-sm">{lang === 'lt' ? 'Jūsų vardas' : 'Your name'}</label>
-      <input type="text" required className="w-full p-2 border rounded bg-white dark:bg-gray-700 dark:border-gray-600" />
-    </div>
-    <div>
-      <label className="block mb-1 text-sm">{lang === 'lt' ? 'Jūsų atsiliepimas' : 'Your testimonial'}</label>
-      <textarea rows="3" required className="w-full p-2 border rounded bg-white dark:bg-gray-700 dark:border-gray-600"></textarea>
-    </div>
-    <button type="submit" className="px-4 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-700">
-      {lang === 'lt' ? 'Siųsti' : 'Submit'}
-    </button>
-  </form>
-</section>
-
-<section className="text-center mt-12">
-          <p>{lang === "lt" ? "Susisiek: " : "Contact: "}</p>
-          <p onClick={copyEmail} className="text-indigo-600 underline cursor-pointer">
-            patrikasbartanovicius@gmail.com
+          <p className="text-lg leading-relaxed text-gray-800 bg-white p-6 rounded-2xl shadow-xl border border-gray-200 whitespace-pre-line">
+            {aboutText[lang]}
           </p>
         </section>
-
-        <footer className="text-center text-sm text-gray-500 mt-16 border-t pt-6">
-          © {new Date().getFullYear()} Patrikas Bartanovičius. All rights reserved.
-        </footer>
       </div>
     </div>
   );
