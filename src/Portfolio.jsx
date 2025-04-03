@@ -102,14 +102,12 @@ My strength lies in the fusion of creativity and technology.`
         ? "Vizualai Instagram, Facebook ar TikTok platformoms – profesionaliai ir įsimintinai."
         : "Visuals for Instagram, Facebook or TikTok – professional and memorable."}</p>
     </div>
-
     <div className="bg-white dark:bg-gray-900 p-6 rounded-xl shadow hover:shadow-lg transition border border-gray-200 dark:border-gray-700">
       <h3 className="text-xl font-semibold text-indigo-700 dark:text-indigo-300 mb-2">🖼️ {lang === "lt" ? "Spaudos dizainas" : "Print Design"}</h3>
       <p className="text-gray-700 dark:text-gray-300">{lang === "lt"
         ? "Plakatai, marškinėliai, etiketės, meniu ir kiti fiziniai produktai."
         : "Posters, shirts, labels, menus, and other printed products."}</p>
     </div>
-
     <div className="bg-white dark:bg-gray-900 p-6 rounded-xl shadow hover:shadow-lg transition border border-gray-200 dark:border-gray-700">
       <h3 className="text-xl font-semibold text-indigo-700 dark:text-indigo-300 mb-2">🌐 {lang === "lt" ? "Svetainių dizainas" : "Website Design"}</h3>
       <p className="text-gray-700 dark:text-gray-300">{lang === "lt"
