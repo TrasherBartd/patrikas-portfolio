@@ -3,6 +3,7 @@ import { useState } from "react";
 
 export default function Portfolio() {
   const [lang, setLang] = useState("lt");
+  const [showMore, setShowMore] = useState(false);
   const [darkMode, setDarkMode] = useState(false);
   const aboutText = {
     lt: `Savarankiškai išmokęs grafinio dizaino ir svetainių kūrimo pagrindus, šiuo metu dirbu su moderniausiomis technologijomis, kad padėčiau klientams perteikti jų vertę aiškiai ir estetiškai.
