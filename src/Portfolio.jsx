@@ -166,5 +166,3 @@ My strength lies in the fusion of creativity and technology.`
 
 }
 
-
-export default Portfolio;
